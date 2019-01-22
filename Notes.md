@@ -2,6 +2,8 @@
 
 High level outline of the frameworks, tools, and concepts in the SQL, Express, React, Node (SERN) stack
 
+![Overview](Overview.png)
+
 ## Development Stack
 
 * Client - SPA
@@ -53,7 +55,8 @@ High level outline of the frameworks, tools, and concepts in the SQL, Express, R
 
 ## Tooling
 
-* [Webpack](https://webpack.js.org/)
+* [Create React App](https://facebook.github.io/create-react-app/) (zero config)
+  * [Webpack](https://webpack.js.org/)
   * [Babel](https://babeljs.io/)
 
 ## Deployment Infrastructure
@@ -71,11 +74,23 @@ High level outline of the frameworks, tools, and concepts in the SQL, Express, R
 * [REST](https://www.wikiwand.com/en/Representational_state_transfer) - REpresentational State Transfer
   * Levels of Rest Compliance
   * Evolvability
+  * Media Types
   * [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
     * Level 0
     * Level 1 - Resources
     * Level 2 - HTTP Verbs
     * Level 3 - Hypermedia Controls
+* [Object Oriented Programing (OOP)](https://www.wikiwand.com/en/Object-oriented_programming) Concepts
+  * Abstraction
+  * Encapsulation
+  * Inheritance
+  * Polymorphism
+  * Association
+  * Aggregation
+  * Composition
+  * Delegation
+  * Coupling
+  * Cohesion
 * Patterns
   * [Strategy Pattern](https://www.wikiwand.com/en/Strategy_pattern)
   * [Data Access Object](https://www.wikiwand.com/en/Data_access_object)
@@ -98,3 +113,4 @@ High level outline of the frameworks, tools, and concepts in the SQL, Express, R
 
 * Typescript
 * Async / Await
+* IDE
