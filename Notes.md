@@ -114,3 +114,67 @@ High level outline of the frameworks, tools, and concepts in the SQL, Express, R
 * Typescript
 * Async / Await
 * IDE
+
+---
+
+## MySQL
+
+### Downloads
+
+* [MySql Full Install](https://dev.mysql.com/downloads/windows/installer/8.0.html)
+  * [MySQL Community Server](https://dev.mysql.com/downloads/windows/installer/8.0.html)
+  * [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+### Docs
+
+* [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/)
+* [MySql Community Server 8.0](https://dev.mysql.com/doc/refman/8.0/en/)
+* [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/)
+* [AQS RDS MySql](https://aws.amazon.com/rds/mysql/)
+  * [Getting Started](https://aws.amazon.com/getting-started/tutorials/create-mysql-db/)
+
+
+* [Create Database](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
+  ```sql
+  CREATE DATABASE dbSky;
+  ```
+
+* [Create Table](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+* [Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+  ```sql
+  USE dbSky;
+  CREATE TABLE posts ( 
+    id smallint unsigned not null auto_increment,
+    text varchar(280) not null, 
+    constraint pk_posts primary key (id)
+  );
+  INSERT INTO posts ( id, text ) VALUES ( null, 'Sample data' );
+  SELECT * FROM posts;
+  ```
+
+### Troubleshooting  
+
+* [MySql 5.7 installer fails to detect VS 2013 redistributable](https://stackoverflow.com/q/45163588/1366033)
+* [Troubleshoot Installing MySql 8.0 and Visual C++ Redistributable on Windows](https://stackoverflow.com/q/54317796/1366033)
+* [Starting MySQL from the Windows Command Line](https://dev.mysql.com/doc/refman/8.0/en/windows-start-command-line.html)
+  ```bash
+  cd "C:\Program Files\MySQL\MySQL Server 8.0\bin\"
+  .\mysqld
+  ```
+* [mysqld: Can't change dir to data. Server doesn't start](https://stackoverflow.com/q/33752407/1366033)  
+  ```bash
+  cd "/c/Program Files/MySQL/MySQL Server 8.0/bin"
+  ./mysqld --initialize
+  ```
+* [Only one usage of each socket address (protocol/network address/port) is normally permitted?](https://stackoverflow.com/q/41836209/1366033)
+* [Who's listening on a port](https://stackoverflow.com/q/48198/1366033)
+  ```bash
+  netstat -a -b
+  ```
+* [Cannot connect to Database server (mysql workbench)](https://stackoverflow.com/a/7875732/1366033)
+  ```bash
+  mysql -u root -p -h 127.0.0.1 -P 3306
+  ```
+* [Access Denied for User 'root'@'localhost' (using password: YES)](https://stackoverflow.com/q/17975120/1366033)
+* [What is the benefit of zerofill in MySQL?](https://stackoverflow.com/q/5256469/1366033)
+* [MySql Console - Can't quit incorrect mySQL command line](https://stackoverflow.com/q/28098061/1366033)
