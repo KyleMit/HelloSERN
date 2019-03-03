@@ -178,3 +178,21 @@ High level outline of the frameworks, tools, and concepts in the SQL, Express, R
 * [Access Denied for User 'root'@'localhost' (using password: YES)](https://stackoverflow.com/q/17975120/1366033)
 * [What is the benefit of zerofill in MySQL?](https://stackoverflow.com/q/5256469/1366033)
 * [MySql Console - Can't quit incorrect mySQL command line](https://stackoverflow.com/q/28098061/1366033)
+
+### X-Dev API
+
+* [Database Connection Example](https://dev.mysql.com/doc/x-devapi-userguide/en/database-connection-example.html)
+* [Session Object](https://dev.mysql.com/doc/x-devapi-userguide/en/working-with-a-session-object.html)
+* [Session - Dynamic SQL](https://dev.mysql.com/doc/x-devapi-userguide/en/using-sql.html)
+
+```js
+var mySession = mysqlx.getSession('user:pwd@localhost');
+mySession.getSchemas()
+var schema = mySession.getSchema("dbsky")
+schema.getTables()
+var posts = schema.getTable("posts")
+
+
+// dynamic sql
+mySession.sql("USE dbsky").execute()
+mySession.sql("Select * FROM posts");
